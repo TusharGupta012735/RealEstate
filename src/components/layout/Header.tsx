@@ -1,14 +1,17 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Home, Search, Bell, Heart, User, Menu, X } from 'lucide-react';
-import { useWallet } from '../../context/WalletContext';
+
+// import { useWallet } from '../../context/WalletContext';
+import { Wallet } from "@coinbase/onchainkit/wallet";
+
 import { useNotifications } from '../../context/NotificationsContext';
 import ConnectWalletButton from '../wallet/ConnectWalletButton';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const { address, isConnected } = useWallet();
+  // const { address, isConnected } = useWallet();
   const { unreadCount } = useNotifications();
   const location = useLocation();
 
@@ -86,7 +89,7 @@ const Header = () => {
 
           {/* Wallet Button */}
           <div className="hidden md:block">
-            <ConnectWalletButton />
+            <Wallet/>
           </div>
 
           {/* Mobile Menu Button */}
