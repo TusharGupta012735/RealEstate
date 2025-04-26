@@ -45,8 +45,7 @@ export const WalletProvider = ({ children }: WalletProviderProps) => {
       await new Promise(resolve => setTimeout(resolve, 1500));
       
       // Generate a random Ethereum address for demo
-      const mockAddress = `0x${Array.from({length: 40}, () => 
-        Math.floor(Math.random() * 16).toString(16)).join('')}`;
+      const mockAddress = `0x${Array.from({length: 40}, () =>         Math.floor(Math.random() * 16).toString(16)).join('')}`;
       
       setAddress(mockAddress);
       setIsConnected(true);
