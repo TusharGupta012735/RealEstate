@@ -6,7 +6,7 @@ import { Home, Search, Bell, Heart, User, Menu, X } from 'lucide-react';
 import { Wallet } from "@coinbase/onchainkit/wallet";
 
 import { useNotifications } from '../../context/NotificationsContext';
-import WalletComponents from "../wallet/ConnectWalletButton";
+// import WalletComponents from "../wallet/ConnectWalletButton";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -89,7 +89,7 @@ const Header = () => {
 
           {/* Wallet Button */}
           <div className="hidden md:block">
-            <WalletComponents />
+            <Wallet />
           </div>
 
           {/* Mobile Menu Button */}
@@ -108,7 +108,7 @@ const Header = () => {
           <div className="px-4 py-2 space-y-2">
             {renderNavLinks()}
             <div className="pt-2">
-              <WalletComponents />
+              <Wallet />
             </div>
           </div>
         </div>
