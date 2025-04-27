@@ -136,7 +136,7 @@ const PropertyForm = ({ onSubmit, isSubmitting }: PropertyFormProps) => {
 
           <div>
             <label htmlFor="price" className="block text-sm font-medium text-gray-300 mb-1">
-              Price (ETH)
+              Price (INR)
             </label>
             <input
               id="price"
